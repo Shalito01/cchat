@@ -11,6 +11,5 @@ $(EXE): $(OBJ)
 
 $(PREFIX).o: server.c utils.h
 
-
 clean:
 	rm -rf $(EXE) $(OBJ)
