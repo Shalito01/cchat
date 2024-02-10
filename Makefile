@@ -1,5 +1,5 @@
 CC = clang
-CFLAGS = -Wall -O2
+CFLAGS = -Wall -Werror -O2
 OBJ = server.o
 PREFIX = server
 EXE = server
