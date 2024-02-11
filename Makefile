@@ -1,15 +1,12 @@
 CC = clang
 CFLAGS = -Wall -Werror -O2
-OBJ = server.o
-PREFIX = server
 EXE = server
+SRC=$(wildcard *.c)
 
 .PHONY: clean
 
-$(EXE): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(EXE)
-
-$(PREFIX).o: server.c utils.h
+$(EXE): $(SRC)
+	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
 	rm -rf $(EXE) $(OBJ)
