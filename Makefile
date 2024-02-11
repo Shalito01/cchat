@@ -1,12 +1,14 @@
-CC = clang
+CC = gcc
 CFLAGS = -Wall -Werror -O2
-EXE = server
-SRC=$(wildcard *.c)
+SRC=$(wildcard ./includes/*.c)
 
 .PHONY: clean
 
-$(EXE): $(SRC)
-	$(CC) -o $@ $^ $(CFLAGS)
+server: $(SRC)
+	$(CC) -o $@ server.c $^ $(CFLAGS)
+
+client: $(SRC)
+	$(CC) -o $@ client.c $^ $(CFLAGS)
 
 clean:
-	rm -rf $(EXE) $(OBJ)
+	echo "hi"

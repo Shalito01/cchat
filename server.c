@@ -1,5 +1,5 @@
-#include "server.h"
-#include "utils.h"
+#include "includes/server.h"
+#include "includes/utils.h"
 #include <errno.h>
 #include <netinet/in.h>
 #include <stdio.h>
@@ -20,7 +20,6 @@ extern int errno;
  */
 #define PROTO 0
 
-#define BUFFER 1025
 #define SRV_PORT 8080
 #define DEBUG 1
 #define HSIZE 512
