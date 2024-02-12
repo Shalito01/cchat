@@ -1,7 +1,7 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#define BUFFER 1025
+#define BUF 1025
 
 enum debug_symbols { DERROR = '-', DSUCCESS = '+', DINFO = 'i' };
 

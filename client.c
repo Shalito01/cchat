@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   cli->username = strdup("Anonymous");
 
   print_prompt(registered, cli);
-  fgets(buffer, BUFFER, stdin);
+  fgets(buffer, BUF, stdin);
   del_trailing_n(buffer);
   printf("%s\n", buffer);
 

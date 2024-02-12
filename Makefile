@@ -1,4 +1,4 @@
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Werror -O2
 SRC=$(wildcard ./includes/*.c)
 

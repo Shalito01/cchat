@@ -31,7 +31,7 @@ static struct Set *users_set[HSIZE];
  */
 int main(int argc, char **argv) {
   int socket_fd, client, c_status;
-  char *buf = calloc(BUFFER, sizeof(char));
+  char *buf = calloc(BUF, sizeof(char));
   struct sockaddr_in server;
   socklen_t addrlen = sizeof(server);
 
@@ -74,7 +74,7 @@ int main(int argc, char **argv) {
           Child Process
       */
       print_debug(DEBUG, (char)DSUCCESS, "Accepted client connection!");
-      c_status = recv(client, buf, BUFFER, 0);
+      c_status = recv(client, buf, BUF, 0);
       if (c_status < 0) {
         perror("[-] ERROR: Failed to read from client!");
       }
@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
       print_debug(DEBUG, (char)DINFO, buf);
 
       close(client);
-      memset(buf, 0x00, BUFFER);
+      memset(buf, 0x00, BUF);
     } else {
       /*
           Parent Process
